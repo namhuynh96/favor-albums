@@ -1,0 +1,14 @@
+.wrapper {
+  padding: 20px;
+  max-width: 400px;
+  margin: auto;
+  border: 0.5px solid rgb(187, 187, 187);
+}
+
+.input {
+  margin-top: 10px;
+}
+
+.btn {
+  margin-top: 10px;
+}
