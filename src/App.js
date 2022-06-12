@@ -4,7 +4,7 @@ import "antd/dist/antd.min.css";
 import FavorAlbum from "./modules/FavorAlbum/FavorAlbum";
 import classes from "./App.module.css";
 import languages from "./shared/languages";
-import LanguageSelect from "./components/LanguageSelect/LanguageSelect";
+import LanguageSelect from "./shared/components/LanguageSelect/LanguageSelect";
 
 export const AppContext = createContext();
 

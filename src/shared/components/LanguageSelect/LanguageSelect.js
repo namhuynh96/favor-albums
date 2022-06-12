@@ -1,5 +1,5 @@
-import useLanguage from "../../hooks/useLanguage";
-import Selection from "../../shared/components/Selection/Selection";
+import useLanguage from "../../../hooks/useLanguage";
+import Selection from "../Selection/Selection";
 import classes from "./LanguageSelect.module.css";
 
 const LanguageSelect = ({ onChange }) => {
