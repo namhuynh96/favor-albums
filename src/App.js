@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { createContext, useState } from "react";
+import "antd/dist/antd.min.css";
 
-function App() {
+import FavorAlbum from "./modules/FavorAlbum/FavorAlbum";
+import classes from "./App.module.css";
+import languages from "./shared/languages";
+import LanguageSelect from "./components/LanguageSelect/LanguageSelect";
+
+export const AppContext = createContext();
+
+const App = () => {
+  const [language, setLanguage] = useState("eng");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContext.Provider value={{ language: languages[language] }}>
+      <div className={classes.wrapper}>
+        <LanguageSelect onChange={(value) => setLanguage(value)} />
+        <FavorAlbum />
+      </div>
+    </AppContext.Provider>
   );
-}
+};
 
 export default App;
